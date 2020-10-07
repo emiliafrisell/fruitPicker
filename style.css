@@ -1,0 +1,119 @@
+body {
+    margin: 0 auto;
+
+    font-family: 'VT323', monospace;
+    font-size: 1.2rem;
+}
+:root {
+    --playerX: 0;
+    --playerY: 0;
+    --priceX: 10;
+    --priceY: 10;
+    --poopX: 0;
+    --poopY: 0;
+}
+
+header {
+    background-image: url("images/grass_background.png");
+    background-size: contain;
+
+    width: 100%;
+    height: 100px;
+}
+
+h1 {
+    padding-left: 2rem;
+    font-size: 4rem;
+}
+
+.playArea {
+    display: grid;
+    width: 400px;
+    height: 400px;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    
+    border: 2px dashed green;
+    border-radius: 5px;
+
+    margin: auto;
+    margin-top: 2rem;
+}
+
+#instructions {
+    grid-row-start: 6;
+    grid-row-end: 10;
+    grid-column-start: 6;
+    grid-column-end: 16;
+
+}
+#start_game {
+    grid-row-start: 10;
+    grid-column-start: 10;
+
+    padding: 0.5rem 1.3rem;
+    margin-top: 0.4rem;
+    border-radius: 5px;
+
+    font-size: 2rem;
+    font-family: 'VT323', monospace;
+}
+
+#try_again {
+    grid-row-start: 18;
+    grid-column-start: 4;
+    grid-column-end: 17;
+
+    padding: 1rem;
+    border-radius: 5px;
+
+    font-size: 1.5rem;
+    font-family: 'VT323', monospace;
+}
+
+iframe {
+    border: none;
+}
+
+#game_over {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 7;
+    grid-column-end: 17;
+}
+
+#poopGIF {
+    grid-row-start: 3;
+    grid-row-end: 18;
+    grid-column-start: 4;
+    grid-column-end: 13;
+}
+.hide {
+    display: none;
+}
+
+img {
+    height: 19px;
+    width: 19px;
+}
+.run {
+    grid-row-start: var(--playerX);
+    grid-column-start: var(--playerY);
+}
+
+.apple, .pineapple, .orange, .grapes, .pear {
+    grid-row-start: var(--priceX);
+    grid-column-start: var(--priceY);
+}
+
+.poop {
+    grid-row-start: var(--poopX);
+    grid-column-start: var(--poopY);
+}
+
+.scores {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}

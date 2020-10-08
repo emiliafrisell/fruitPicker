@@ -172,8 +172,8 @@ let controller = (function() {
             // to make sure that the fruit isn't position on the player or a poop..
             let isSame = 0;
 
-            pricePosition.x = (Math.floor(Math.random() * 19) + 1); 
-            pricePosition.y = (Math.floor(Math.random() * 19) + 1);
+            pricePosition.x = (Math.floor(Math.random() * 20) + 1); 
+            pricePosition.y = (Math.floor(Math.random() * 20) + 1);
 
             // Compare all the poops to the potential position
             poop.forEach(element => {
